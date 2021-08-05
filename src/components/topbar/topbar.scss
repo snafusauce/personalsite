@@ -9,9 +9,12 @@
     top: 0;
     z-index: 3;
     transition: all 1s ease;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    
+
 
 .wrapper{
-    padding: 15px 15px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,6 +22,7 @@
     .left{
         display: flex;
         align-items: center;
+        
 
         .logo{
             font-size: 40px;
@@ -32,16 +36,18 @@
             align-items: center;
             margin-left: 30px;
 
-            //@include mobile{
-                //display: none;
-              //}
+            @include mobile{
+                display: none;
+              }
 
             .icon{
                 font-size: 20px;
                 margin-right: 5px;
+                color: black;
+                background: black;
             }
             span {
-               font-size: 15px;
+               font-size: 25px;
                font-weight: 500;
             }
         }

@@ -1,16 +1,137 @@
+@import "../../global.scss";
+
 .intro{
-    background-color: darkgoldenrod;
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: .4;
+        overflow: hidden;
+        align-items: center;
+        padding: 80px 35px;
+
+        @include mobile{
+            padding: 20px 12.5px;
+            flex: .6;
+
+        }
+
+        .imgContainer{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%; //make the container shape a circle (background)
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            
+            border: 7px solid transparent;  //add a border colro and size 
+            float: left;
+            //make the circle gradient
+            background-image: linear-gradient(white, white), linear-gradient(to right, crimson, purple); //colors the image border
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+ 
+    
+
+            img{//resize the image and move it within the container so it is more centered
+                height: 130%;
+                width: 130%;
+                object-position: 0px 100px;  
+                transition: all;
+
+
+
+            }
+        }
+    }
+
+    .right{
+        flex: .6;
+        overflow: hidden;
+        align-items: center;
+
+        @include mobile{
+            padding: 20px 0px;
+            flex: .4;
+
+        }
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 80px;
+
+
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+                padding-top: 0px;
+             }
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+
+                @include mobile{
+                    font-size: 35px;
+                }
+            }
+
+            h2{
+                font-size: 35px;
+
+                @include mobile{
+                    font-size: 30px;
+                }
+
+                span {
+                    font-size: inherit;
+                  }
+
+                  .ityped-cursor {
+                    animation: blink 1s infinite;
+                  }
+          
+                  @keyframes blink {
+                      50%{
+                          opacity: 1;
+                      }
+                      100%{
+                          opacity: 0;
+                      }
+                  }
+            }
+       
+      
+
+        }
+    }
+    a {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+  
+        img {
+          width: 40px;
+          animation: arrowBlink 2s infinite;
+        }
+    
+        @keyframes arrowBlink {
+            100%{
+                opacity: 0;
+            }
+        }
+    }
 }
 
-h1 {
-    background: #121FCF;
-    background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-    background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    
-  }
+
 
   

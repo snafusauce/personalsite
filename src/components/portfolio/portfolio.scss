@@ -1,3 +1,87 @@
+@import "../../global.scss";
+
 .portfolio{
-    background-color: darkseagreen;
+    background-color: #Fdfcfa;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 50px;
+        padding-top: 20px;
+
+        @include mobile{
+          padding: 10px 0px;
+          font-size: 30px;
+
+      }
+    }
+
+    ul{
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex; //make horizonal list
+
+        @include mobile{
+          justify-content: center;
+          flex-wrap: wrap;
+          margin:5px;
+      }
+    }
+    .container {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; //makes item go to another line
+
+        @include mobile{
+        width: 100%;
+      }
+        .item {
+            width: 280px;
+            height: 200px;
+            border-radius: 20px;
+            border: 1px solid rgb(240, 239, 239);
+            margin: 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: all .5s ease;
+            cursor: pointer; //makes the hover a hand so that it's more clear it is a link
+            
+            //adjust the boxes/images for projects
+            @include mobile{
+              width: 140px;
+              height: 130px;
+              margin: 10px 10px;
+
+          }
+            h3 {
+                position: absolute;
+                font-size: 20px;
+              }
+        
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+              }
+              &:hover {
+                background-color: $maincolor;
+                img {
+                  opacity: 0.2;
+                  z-index: 0;
+                }
+            }    
+              
+        }
+    }
+
+
+
 }

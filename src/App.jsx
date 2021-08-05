@@ -6,20 +6,25 @@ import Test from './components/test/Test';
 import Contact from './components/contact/Contact';
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
+import Works from "./components/works/Works"
 
 
 
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)
+
+//window.addEventListener('scroll',changeBackground);
+
   return (
   <div className="App">
+  
   <Topbar menuOpen = {menuOpen} setMenuOpen={setMenuOpen}/>
-  <Menu/>
-  <Menu/>
+  <Menu menuOpen = {menuOpen} setMenuOpen={setMenuOpen}/>
 
   <div className="sections">
     <Intro/>
     <Portfolio/>
+    <Works/>
     <Test/>
     <Contact/>
   </div>

@@ -1,6 +1,11 @@
 import "./topbar.scss"
 import { Instagram, LinkedIn, Mail, Twitter } from "@material-ui/icons"
+import { useState } from "react";
+
 export default function topbar({ menuOpen, setMenuOpen }) {
+
+
+
     return (
         <div className = {"topbar " + (menuOpen && "active")} id="topbar"> 
             <div className="wrapper">

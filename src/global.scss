@@ -1,4 +1,4 @@
-$maincolor: #4267B2;
+$maincolor: crimson;
 
 $width: 768px;
 
@@ -7,3 +7,16 @@ $width: 768px;
         @content
     }
 }
+
+
+.gradient {
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    
+  }
+
