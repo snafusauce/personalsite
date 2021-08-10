@@ -2,12 +2,27 @@ import "./topbar.scss"
 import { Instagram, LinkedIn, Mail, Twitter } from "@material-ui/icons"
 import { useState } from "react";
 
-export default function topbar({ menuOpen, setMenuOpen }) {
+export default function Topbar({ menuOpen, setMenuOpen }) {
 
+    /*
+        const[topbar, setTopbar] = useState(false);
 
+    const changeShadow = () => {
+      console.log(window.scrollY);
+        if(window.scrollY >= 3){
+            setTopbar(true);
+        } else {
+            setTopbar(false);
+        }
+    }
+    
+    window.addEventListener("scroll", changeShadow, true);
+    */
+  
 
     return (
-        <div className = {"topbar " + (menuOpen && "active")} id="topbar"> 
+        //{topbar ? 'topbar scroll' : "topbar " + (menuOpen && "active")}
+        <div className = {"topbar scroll " + (menuOpen && "active")} id="topbar"> 
             <div className="wrapper">
                 <div className="left"> 
                 <a href="https://www.linkedin.com/in/mikecsaucedo/" target="_blank" rel="noopener noreferrer" className="icon"> <LinkedIn/></a>

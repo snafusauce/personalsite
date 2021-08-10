@@ -7,6 +7,9 @@
         padding: 7px;
         border-radius: 10px; //curves the corners of a box to look like a button
         cursor: pointer; //makes the hover a hand so that it's more clear it is a link
+        transition: all .7s ease;
+
+        
         
         @include mobile{
         margin-right: 15px;
@@ -15,7 +18,8 @@
         }
 
         &.active{
-            background-color: $maincolor;
+            background-image: $image; //this is for the buttons
             color: white
+
         }
     }

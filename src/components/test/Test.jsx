@@ -1,65 +1,39 @@
 import "./test.scss"
+import Emoji from "../emoji"
 
 export default function test() {
-    const data = [
-        {
-          id: 1,
-          name: "Tom Durden",
-          title: "Senior Developer",
-          img:
-            "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          icon: "assets/twitter.png",
-          desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
-        },
-        {
-          id: 2,
-          name: "Alex Kalinski",
-          title: "Co-Founder of DELKA",
-          img:
-            "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          icon: "assets/youtube.png",
-          desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
-          featured: true,
-        },
-        {
-          id: 3,
-          name: "Martin Harold",
-          title: "CEO of ALBI",
-          img:
-            "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          icon: "assets/linkedin.png",
-          desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
-        },
-      ];
+
     return (
         <div className= "test" id="test">
-            <h1>About </h1>
-            <div className="container">
-                {data.map((d) => (
-        //cut out card and replace with below for featured pop up
-        //<div className={d.featured ? "card featured" : "card"}
-                <div className="card">
-                <div className="top">
-                    <img src="assets/right-arrow.png" className = "left" alt="" />
-                    <img src={d.img} className="user" alt="" />
-                    <img src={d.icon} className="right" alt="" />
+            <div className="left">
+                <div className="imgContainer2">
+                    <img src="assets/s.jpeg" alt="A man in the snow with their child"/>
                 </div>
-                <div className="center">
-                   {d.desc}
-
+                <div className="imgContainer">
+                    <img src="assets/mount-fuji-japan.jpeg" alt="A man in the snow with their child"/>
                 </div>
-                <div className="bottom">
-                    <h3> {d.name}</h3>
-                    <h4> {d.title}</h4>
+                <div className="imgContainer3">
+                    <img src="assets/berk.jpeg" alt="A man in the snow with their child"/>
                 </div>
-            </div>
-
-                ))}
 
             </div>
+   
+            <div className="right">
+                <div className="wrapper">
+                <h2 className="gradient">About Mike</h2>
+                <h1>Story and Background.</h1>
+                <span>
+                  Hello and thank you for checking out my page! I've coded this myself using React.js and css, please
+                  do let me know if you find any bugs <Emoji symbol="🐞" label="bug"/>. 
+                  <br></br><br></br> My name is Mike, as you've seen a few times on this site, and 
+                  I'm a first generation college graduate working in tech and aspiring to make the world better one product launch at a time. 
+                                    <br></br><br></br>  That's basically it, but here's more information below:
+              </span>
+
+              <h2>About Mike</h2>
+
+                </div>
+                </div>
         </div>
     )
 }

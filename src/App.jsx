@@ -7,13 +7,13 @@ import Contact from './components/contact/Contact';
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
 import Works from "./components/works/Works"
+import Bottombar from './components/bottombar/Bottombar';
 
 
 
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)
 
-//window.addEventListener('scroll',changeBackground);
 
   return (
   <div className="App">
@@ -27,7 +27,10 @@ function App() {
     <Works/>
     <Test/>
     <Contact/>
+
   </div>
+
+
   </div>
     
   );

@@ -10,24 +10,16 @@ import {
 } from "../..//data";
 
 export default function Portfolio() {
-    const [selected, setSelected] = useState("featured");
+    const [selected, setSelected] = useState("fte");//default selection
     const[data, setData] = useState([])
     const list = [
         {
-            id: "featured",
-            title: "Featured",
+            id: "fte",
+            title: "Full Time",
         },
         {
-            id: "web",
-            title: "Web App",
-        },
-        {
-            id: "mobile",
-            title: "Mobile App",
-        },
-        {
-            id: "data",
-            title: "Data",
+            id: "intern",
+            title: "Internships",
         },
 
     ];
@@ -35,25 +27,19 @@ export default function Portfolio() {
 useEffect(() => {
 
     switch(selected){
-        case "featured":
+        case "fte":
             setData(featuredPortfolio);
             break;
-        case "mobile":
-            setData(mobilePortfolio);
-            break;
-        case "web":
+        case "intern":
             setData(webPortfolio);
             break;
-        case "data":
-            setData(dataPortfolio);
-            break; 
         default:
             setData(featuredPortfolio);
     }
 }, [selected]);
     return (
         <div className = "portfolio" id="portfolio">
-            <h1>Projects</h1>
+            <h1>Experience</h1>
             <ul> 
                 {list.map((item) => (
                     <PortfolioList 
@@ -65,19 +51,31 @@ useEffect(() => {
                 ))}
 
             </ul>
+
             <div className="container">
                 {data.map((d) => (
+        //cut out card and replace with below for featured pop up
+        //<div className={d.featured ? "card featured" : "card"}
+                <div className="card">
+                <div className="top">
+                    <img src={d.img} className="user" alt="" />
 
-                <div className="item">
-                <img
-                src={d.img}
-                alt="placeholder image"
-                />
-                <h3>{d.title}</h3>
-                </div> 
+
+                </div>
+
+                <div className="bottom">
+
+                    <h3> {d.title}</h3>
+                    <h4 className="gradient"> 
+                    {d.job}</h4>
+                    <span > 
+                    {d.res}</span>
+                </div>
+                <div className="center">
+                </div>
+            </div>
+
                 ))}
-
-
 
             </div>
         </div>

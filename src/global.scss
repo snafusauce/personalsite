@@ -1,4 +1,6 @@
-$maincolor: crimson;
+$maincolor: #CF1512;
+
+$image: linear-gradient(to top right, #CF1512 50%, purple 100%);
 
 $width: 768px;
 
@@ -8,15 +10,13 @@ $width: 768px;
     }
 }
 
-
 .gradient {
     background: #121FCF;
-    background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-    background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: -webkit-linear-gradient(to top right, #CF1512 50%, purple 100%);
+    background: -moz-linear-gradient(to top right, #CF1512 50%, purple 100%);
+    background: linear-gradient(to top right, #CF1512 50%, purple 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  
-    
   }
 
+  //style={{background: "linear-gradient(#e66465, #9198e5);" }}
